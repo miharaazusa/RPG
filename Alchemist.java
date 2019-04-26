@@ -5,13 +5,16 @@ public class Alchemist extends Character{
 		super(name,hp,mp,power);
 	}
 
+	@Override
 	public void introduce() {
 		System.out.println("ぼくは"+name+"！は"+hp+"だ！");
 	}
 
+	@Override
 	public void attack(Character target) {
-		alchemy();
+		System.out.println(name+"の攻撃！");
 		target.damage(power);
+		alchemy();
 	}
 
 	public void alchemy() {

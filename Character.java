@@ -1,5 +1,5 @@
 
-public class Character {
+abstract class Character {
    protected String name;
    protected static int hp;
    protected int mp;
@@ -15,23 +15,20 @@ public class Character {
 	public void introduce() {
 		System.out.println(name+"です。"+hp+"はです。");
 	}
-	
+
 	public void damage(int power) {
 		hp=hp-power;
 		System.out.println(name+"は"+power+"のダメージを受けた！");
 	}
-	public void attack(Character target) {
-		System.out.println(name+"の攻撃！");
-		target.damage(power);
-	}
+	abstract void attack(Character target);
 
 
 
-	
-	
-	
-	
-	
+
+
+
+
+
 	//public int getAge() {
 	//	return age;
 	//}
